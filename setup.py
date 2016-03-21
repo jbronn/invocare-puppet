@@ -14,7 +14,7 @@ setup(name='invocare-puppet',
       description='Puppet Invocations',
       license='Apache License 2.0',
       url='https://github.com/jbronn/invocare-puppet',
-      download_url='http://pypi.python.org/pypi/invocare-puppet/',
+      download_url='https://pypi.python.org/pypi/invocare-puppet/',
       install_requires=[
         'invocare-ssh>=0.1.0,<1.0.0',
       ],
