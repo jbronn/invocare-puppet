@@ -28,7 +28,7 @@ def puppet_agent(
     """
     Runs the Puppet agent on the given host.
     """
-    config = ctx.config.get('puppet', {})
+    config = ctx.config.get('puppet_agent', {})
 
     agent_opts = [
         '--onetime',

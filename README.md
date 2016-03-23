@@ -9,3 +9,5 @@ Runs the Puppet agent on the given host.  In the example below, we're running th
 ```sh
 $ invoke puppet_agent www.foo.com --user jbronn
 ```
+
+Default options for this task may be set within the `puppet_agent` configuration context.
