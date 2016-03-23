@@ -9,22 +9,22 @@ from invocare.ssh import ssh
         'host': 'The host to run the Puppet agent on.',
         'debug': 'Set debug mode for Puppet agent run.',
         'environment': 'The environment to use for the Puppet agent run.',
-        'noop': 'Sets noop option for Puppet agent run',
-        'user': 'The SSH login user for the Puppet agent run',
-        'test': 'Set test mode for the Puppet agent run',
+        'noop': 'Sets noop option for Puppet agent run.',
+        'user': 'The SSH login user for the Puppet agent run.',
+        'test': 'Set test mode for the Puppet agent run.',
     }
 )
 def puppet_agent(
     ctx,
     host,
-    debug = False,
-    environment = 'production',
-    hide = None,
-    noop = False,
-    test = True,
-    user = None,
-    warn = False,
-    ):
+    debug=False,
+    environment='production',
+    hide=None,
+    noop=False,
+    test=True,
+    user=None,
+    warn=False,
+):
     """
     Runs the Puppet agent on the given host.
     """
