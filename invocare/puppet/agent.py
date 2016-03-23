@@ -1,6 +1,6 @@
 from invoke import task
 
-from invocare.ssh import ssh_run
+from invocare.ssh import ssh
 
 
 @task(
@@ -53,9 +53,9 @@ def puppet_agent(
     if config.get('noop', noop):
         agent_opts.append('--noop')
 
-    return ssh_run(
+    return ssh(
         ctx,
-        config.get('host', host),
+        host,
         'sudo puppet agent {}'.format(' '.join(agent_opts)),
         hide = config.get('hide', hide),
         user = config.get('user', user),
