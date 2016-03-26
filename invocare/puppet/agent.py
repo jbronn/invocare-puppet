@@ -1,4 +1,5 @@
 from invoke import task
+from invoke.vendor import six
 
 from invocare.ssh import ssh
 
@@ -21,6 +22,7 @@ def puppet_agent(
     environment='production',
     hide=None,
     noop=False,
+    tags=None,
     test=True,
     user=None,
     warn=False,
@@ -49,6 +51,12 @@ def puppet_agent(
 
     if config.get('debug', debug):
         agent_opts.append('--debug')
+
+    tags = config.get('tags', tags)
+    if tags:
+        if isinstance(tags, six.string_types):
+            tags = [tags]
+        agent_opts.extend(['--tags', ','.join(tags)])
 
     if config.get('noop', noop):
         agent_opts.append('--noop')
