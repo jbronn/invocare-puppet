@@ -17,7 +17,7 @@ setup(name='invocare-puppet',
       url='https://github.com/jbronn/invocare-puppet',
       download_url='https://pypi.python.org/pypi/invocare-puppet/',
       install_requires=[
-        'invocare-ssh>=0.2.0,<1.0.0',
+        'invocare-ssh>=0.3.0,<1.0.0',
       ],
       packages=['invocare.puppet'],
       zip_safe=False,

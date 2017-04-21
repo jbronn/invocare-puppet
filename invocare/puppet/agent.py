@@ -5,7 +5,6 @@ from invocare.ssh import ssh
 
 
 @task(
-    contextualized=True,
     help={
         'host': 'The host to run the Puppet agent on.',
         'debug': 'Set debug mode for Puppet agent run.',
